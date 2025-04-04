@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+  <title>Welcome secure</title>
+</head>
+<body>
+<h1>secure</h1>
+<p>should be secured</p>
+<p>You are logged in as: <span th:text="${username}"></span></p>
+<p><a th:href="@{/logout}">Logout</a></p>
+</body>
+</html>
