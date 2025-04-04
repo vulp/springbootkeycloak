@@ -15,7 +15,7 @@ public class SecurityConfig {
         http
                 .authorizeHttpRequests(authorize -> authorize
                         .requestMatchers("/", "/logout").permitAll()
-                        .anyRequest().authenticated()
+                        .anyRequest().authenticated()//secure rest of the urls
                 )
                 .oauth2Login(oauth2Login -> oauth2Login
                         .loginPage("/oauth2/authorization/keycloak")
@@ -23,7 +23,6 @@ public class SecurityConfig {
                 )
                 .logout(logout -> logout
                         .logoutSuccessUrl("/index")
-                        .permitAll()
                 );
         return http.build();
     }
