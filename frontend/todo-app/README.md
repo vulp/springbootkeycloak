@@ -5,6 +5,8 @@ keycloak needs to be up and running
 
 ## Getting Started
 
+npm install of course
+
 create .env.local under todo-app folder and add
 NEXTAUTH_SECRET=<your secret>
 KEYCLOAK_FRONTEND_CLIENT_ID=>keycloak client id>
